@@ -14,6 +14,7 @@
 
     width: 100%;
     padding: 0 32px;
+    padding-bottom: 79px;
 }
 
 .titleWrapper {
@@ -218,6 +219,7 @@
 @media (max-width: 768px) {
     .portfolioWrapper {
         padding: 0 16px;
+        padding-bottom: 69px;
     }
 
     .case {
@@ -241,5 +243,6 @@
 
     .viewAllCasesButton {
         width: 100%;
+        margin-top: 32px;
     }
 }

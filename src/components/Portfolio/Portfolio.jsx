@@ -60,7 +60,7 @@ export function Portfolio() {
                         </button>
                     </li>)}
                 </ul>
-                <ul className={clsx(styles.list, styles.cases)}>
+                <ul className={styles.cases}>
                     {
                         filteredCases.map((item) => 
                         <li 
