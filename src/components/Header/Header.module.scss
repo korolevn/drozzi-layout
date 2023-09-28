@@ -1,0 +1,264 @@
+@import "../../styles/common.scss";
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.header {
+    display: flex;
+    position: relative;
+    
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 100vh;
+
+    background-image: url("../../assets/images/bg-header.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.headerWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigationWrapper {
+    position: fixed;
+    z-index: 1;
+    
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1440px;
+    height: 93px;
+    padding: 0 32px;
+
+    backdrop-filter: blur(10px);
+}
+
+.logoWrapper {
+    margin-right: auto;
+}
+
+.menu {
+    @include list;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin-right: 15px;
+}
+
+.menuLink {
+    @include link;
+}
+
+.menuItem {
+    padding: 10px 16px;
+}
+
+.feedBackButton {
+    @include redButton;
+    @include link;
+
+    padding: 10px 20px;
+    font-size: inherit;
+    color: #ffffff;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    height: 100%;
+    padding: 32px;
+    padding-top: 110px;
+
+    overflow: hidden;
+}
+
+.title {
+    margin: 0;
+    width: 213px;
+
+    align-self: start;
+
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: $black2;
+}
+
+.downButton {
+    margin-left: -24px;
+    width: 48px;
+    height: 48px;
+    border: none;
+
+    position: absolute;
+    left: 50%;
+
+    background-color: transparent;
+    background-image: url("../../assets/images/arrow.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    font-size: 0;
+}
+
+.socials {
+    @include list;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
+
+.social {
+    position: relative;
+
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: $black2;
+    text-transform: uppercase;
+}
+
+.social:not(:first-child) {
+    margin-left: 32px;
+}
+
+.socialLink {
+    @include link;
+
+    display: flex;
+
+    padding-left: 32px;
+
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+}
+
+.whatsapp  {
+    background-image: url("../../assets/images/ws-icon.svg");
+}
+.telegram {
+    background-image: url("../../assets/images/tg-icon.svg");
+}
+
+.socialCaption {
+    margin: 0;
+}
+
+.burgerButton {
+    display: none;
+
+    border: none;
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../../assets/images/burger.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    font-size: 0;
+}
+
+.closeButton {
+    display: none;
+
+    position: absolute;
+    top: 31px;
+    right: 16px;
+
+    border: none;
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../../assets/images/close-button.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    font-size: 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0;
+    }
+
+    .navigation {
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+        width: 100%;
+        height: 100vh;
+
+        background-color: #ffffff;
+    }
+
+    .navigation.closed {
+        display: none;
+    }
+
+    .navigationWrapper {
+        padding: 24px 16px;
+        z-index: 1;
+    }
+
+    .logoWrapper {
+        z-index: 1;
+    }
+
+    .headerContent {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .menu {
+        display: block;
+        margin: 0;
+        margin-top: 93px;
+    }
+
+    .burgerButton {
+        display: block;
+    }
+
+    .closeButton {
+        display: block;
+    }
+
+    .feedBackButton {
+        display: none;
+    }
+
+    .social:not(:first-child) {
+        margin-left: 8px;
+    }
+
+    .socialLink {
+        width: 48px;
+        height: 48px;
+
+        background-size: 40px;
+        background-position: 50% 50%;
+    }
+
+    .socialCaption {
+        font-size: 0;
+    }
+}
