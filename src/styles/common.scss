@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: "Inter";
+    font-style: normal;
+
+    src:    url("../assets/fonts/Inter-Regular.woff") format("woff"),
+            url("../assets/fonts/Inter-Regular.ttf") format("ttf");;
+}
+
+@font-face {
+    font-weight: 500;
+    font-family: "Inter";
+    font-style: normal;
+
+    src:    url("../assets/fonts/Inter-Medium.woff") format("woff"),
+            url("../assets/fonts/Inter-Medium.ttf") format("ttf");
+}
+
+@font-face {
+    font-weight: 600;
+    font-family: "Inter";
+    font-style: normal;
+
+    src:    url("../assets/fonts/Inter-SemiBold.woff") format("woff"),
+            url("../assets/fonts/Inter-SemiBold.ttf") format("ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: normal;
+}

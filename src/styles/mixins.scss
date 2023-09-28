@@ -1,0 +1,51 @@
+@import "./vars.scss";
+
+@mixin list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+    cursor: pointer;
+}
+
+@mixin link {
+    color: inherit;
+    text-decoration: none;
+}
+
+@mixin redButton {
+    border: none;
+    border-radius: 50px;
+    
+    background-color: $accentRed;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-weight: 500;
+
+    cursor: pointer;
+    &:hover {
+        background-color: $hoverRedButton;
+    }
+}
+
+@mixin transparentButton {
+    display: block;
+
+    border: 1px solid $accentRed;
+    border-radius: 56px;
+    padding: 21px 70px;
+
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: $accentRed;
+    background-color: transparent;
+
+    cursor: pointer;
+    &:hover {
+        color: #ffffff;
+        background-color: $accentRed;
+    }
+}
