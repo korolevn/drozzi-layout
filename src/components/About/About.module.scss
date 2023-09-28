@@ -1,0 +1,167 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.title {
+    margin: 0;
+
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.about {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.aboutWrapper {
+    padding: 0 32px;
+}
+
+.team {
+    @include list;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 58px;
+    
+    gap: 32px;
+}
+
+.teamItem {
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    font-size: 32px;
+
+    span {
+        margin-right: 12px;
+
+        color: $accentRed;
+    }
+}
+
+.teamInfoWrapper {
+    margin-top: 58px;
+    margin-bottom: 66px;
+
+    display: flex;
+    font-size: 18px;
+}
+
+.teamInfo {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    padding-right: 12px;
+
+    p {
+        margin: 0;
+    }
+}
+
+.teamImage {
+    position: relative;
+
+    flex-basis: 50%;
+
+    margin: 0;
+    padding-left: 12px;
+}
+
+.image {
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    height: 100%;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+.imageCaption {
+    position: 50%;
+
+    margin-top: 8px;
+
+    text-align: center;
+    color: $gray5;
+}
+
+.features {
+    @include list;
+
+    display: flex;
+    column-gap: 32px;
+
+    width: 100%;
+    margin-top: 64px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    max-width: 140px;
+
+    span {
+        margin-bottom: 12px;
+
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+        color: $accentRed;
+    }
+}
+
+.loadMoreButton {
+    @include transparentButton;
+
+    margin-top: 37px;
+
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .aboutWrapper {
+        padding: 0 16px;
+    }
+    
+    .teamInfoWrapper {
+        display: block;
+
+        margin-top: 32px;
+    }
+
+    .teamInfo {
+        padding-right: 0;
+    }
+
+    .teamImage {
+        margin-top: 32px;
+        padding-left: 0;
+    }
+
+    .features {
+        display: block;
+
+        margin-top: 32px;
+    }
+
+    .feature {
+        max-width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    .loadMoreButton {
+        margin: 0 auto;
+        margin-top: 32px;
+        width: 100%;
+    }
+}

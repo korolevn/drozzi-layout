@@ -1,0 +1,72 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    height: 100%;
+    width: 100%;
+
+    z-index: 1;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modalShowed {
+    opacity: 1;
+    transition-duration: 0.1s;
+    pointer-events: all;
+}
+
+.modalWrapper {
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modalImage.modalShowed {
+    transform: scale(1);
+}
+
+.modalImage {
+    width: 60vw;
+    height: auto;
+
+    transform: scale(0.5);
+    transition: 0.8s;
+}
+
+.closeModalButton {
+    @include redButton;
+
+    position: absolute;
+
+    bottom: 0px;
+    left: 50%;
+
+    width: 200px;
+    margin-left: -100px;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+
+    padding: 8px 16px;
+}
+
+@media (max-width: 768px) {
+    .modalImage {
+        width: 80vw;
+        height: auto;
+    }
+}
