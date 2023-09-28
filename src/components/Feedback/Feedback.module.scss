@@ -1,0 +1,199 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.feedback {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.feedbackWrapper {
+    padding: 0 32px;
+    padding-bottom: 150px;
+}
+
+.feedbackContent {
+    margin-top: 27px;
+}
+
+.feedbackColumn {
+    display: flex;
+}
+
+.receiver {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 23px;
+}
+
+.receiverImage {
+    width: 200px;
+    height: auto;
+}
+
+.receiverName {
+    margin-top: 32px;
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+}
+
+.receiverInfo {
+    margin: 0;
+    margin-top: 6px;
+
+    font-size: 18px;
+}
+
+.brifingsWrapper {
+    margin-top: 72px;
+}
+
+.brifingsTitle {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+}
+
+.brifings {
+    @include list;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding-top: 17px;
+}
+
+.brifing {
+    position: relative;
+    display: flex;
+
+    color: $accentRed;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.brifingLink {
+    @include link;
+
+    position: relative;
+
+    padding-right: 18px;
+
+    background-image: url("../../assets/images/download-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+
+        border-bottom: 1px solid $accentRed;
+        opacity: 0.4;
+    }
+}
+
+.feedbackForm {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 48px;
+    
+    margin-left: 177px;
+    max-width: 562px;
+    width: 100%;
+    
+    & input, textarea {
+        border: none;
+        border-bottom: 1px solid $gray4;
+        width: 100%;
+
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 32px;
+        
+        outline: none;
+        resize: none;
+    }
+
+    & label {
+        position: relative;
+        
+        font-family: inherit;
+        font-size: 24px;
+        line-height: 32px;
+        color: $gray6;
+
+        transition-duration: 0.1s;
+    }
+}
+
+.title {
+    margin: 0;
+
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.sendFormButton {
+    @include redButton;
+
+    position: absolute;
+    bottom: -86px;
+
+    padding: 16px 32px;
+    font-size: 24px;
+    
+    &:disabled {
+        background-color: $disabled;
+    }
+}
+
+.validation {
+    color: $accentRed;
+}
+
+@media (max-width: 768px) {
+    .feedbackWrapper {
+        padding-bottom: 54px;
+    }
+
+    .feedbackColumn {
+        display: block;
+    }
+
+    .receiverName {
+        margin-top: 8px;
+    }
+
+    .feedbackForm {
+        margin-top: 32px;
+        margin-left: 0;
+
+        row-gap: 16px;
+    }
+
+    .sendFormButton {
+        width: 100%;
+        position: static;
+    }
+
+    .brifingsWrapper {
+        margin-top: 32px;
+    }
+
+    .optionalText {
+        display: none;
+    }
+}

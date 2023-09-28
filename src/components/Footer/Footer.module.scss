@@ -1,0 +1,47 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    min-height: 140px;
+    height: 100%;
+    max-width: 1440px;
+    padding: 25px 0;
+
+    border-top: 1px solid $gray6;
+}
+
+.footerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 18px;
+
+    padding: 0 32px;
+
+    li {
+        color: $gray3;
+        text-align: center;
+    }
+}
+
+.copyright {
+    @include list;
+    
+    display: flex;
+    column-gap: 24px;
+}
+
+
+@media (max-width: 768px) {
+    .copyright {
+        flex-direction: column;
+        row-gap: 16px;
+
+        margin-bottom: 32px;
+    }
+}
