@@ -142,6 +142,10 @@
     padding-left: 12px;
 }
 
+.portfolioCard {
+    @include link;
+}
+
 .imageWrapper {
     position: relative;
 }

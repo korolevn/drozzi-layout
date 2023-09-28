@@ -67,11 +67,13 @@ export function Portfolio() {
                             key={item.id}
                             className={styles.case}
                         >
-                            <div className={styles.imageWrapper}>
-                                <img className={styles.image} src={item.image} alt="" />
-                                <span className={styles.category}>{item.category}</span>
-                            </div>
-                            <span className={styles.caseTitle}>{item.title}</span>
+                            <a href="#" className={styles.portfolioCard}>
+                                <div className={styles.imageWrapper}>
+                                    <img className={styles.image} src={item.image} alt="" />
+                                    <span className={styles.category}>{item.category}</span>
+                                </div>
+                                <span className={styles.caseTitle}>{item.title}</span>
+                            </a>
                             <ul className={styles.tags}>
                                 {item.tags.map((tag) => 
                                     <li className={styles.tag}>
